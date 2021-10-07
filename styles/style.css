@@ -21,6 +21,18 @@
     --white-color: #fff;
 }
 
+@media (max-width: 672px) {
+    :root {
+        --bigger-font: 4rem;
+        --big-font: 3rem;
+        --normal-font: 2rem;
+        --body-font: 1rem;
+        --small-font: 0.75rem;
+        --smaller-font: 0.5rem;
+        --smallest-font: 0.25rem;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +68,7 @@ body {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 section {
@@ -303,4 +315,14 @@ section {
 
 .footer .right a:hover {
     color: var(--yellowish-color);
+}
+
+@media (max-width: 491px) {
+    .footer {
+        flex-direction: column;
+        padding-block: 1rem;
+    }
+    .footer .left {
+        margin-bottom: 20px;
+    }
 }
