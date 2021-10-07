@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
+:root {
+    /* Typograpghy */
+    --bigger-font: 5rem;
+    --big-font: 4rem;
+    --normal-font: 2.25rem;
+    --body-font: 1.313rem;
+    --small-font: 1rem;
+    --smaller-font: 0.75rem;
+    --smallest-font: 0.5rem;
+    /* font faces */
+    --roboto-family: 'Roboto', sans-serif;
+    --lora-family: 'Lora', serif;
+    --playfair-display-family: 'Playfair Display', serif;
+    /* color-scheme*/
+    --dark-color: #0e0f01;
+    --yellowish-color: #fbd300;
+    --yellowish-color-alt: #ecd353;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: var(--body-font);
+    font-family: var(--roboto-family);
+    overflow-x: hidden;
+    color: var(--white-color);
+}
+
+.btn {
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    border: 1px solid var(--white-color);
+    padding: 0.45em 1.3em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+section {
+    margin-block: 4rem;
+}
+
+*::selection {
+    color: var(--dark-color);
+    background: var(--yellowish-color);
+}
+
+
+/* =================== Header ====================== */
+
+.header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-color);
+}
+
+
+/* =========== Navbar ============ */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--dark-color);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.navbar-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.navbar .container {
+    padding-inline: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar .container a {
+    color: var(--white-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar .container a:nth-child(even):after {
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--white-color);
+    transform: scale(0, 100%);
+    transform-origin: 0 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .container a:nth-child(even):hover::after,
+.navbar .container a:nth-child(even):active::after {
+    transform: scale(1, 1);
+    background: var(--yellowish-color);
+}
+
+.navbar .container a:nth-child(odd) {
+    color: var(--yellowish-color);
+    font-size: var(--normal-font);
+    transition: all 0.3s ease;
+}
+
+.navbar .container a:nth-child(odd):hover {
+    color: var(--yellowish-color-alt);
+}
+
+.navbar .logo {
+    color: var(--yellowish-color);
+    font-size: var(--normal-font);
+    font-family: var(--lora-family);
+    font-style: italic;
+}
+
+.hero-text-container {
+    margin-top: 17rem;
+    margin-left: -40px;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-text-container h1 {
+    font-size: var(--big-font);
+    color: var(--yellowish-color);
+}
+
+.hero-text-container h3 {
+    width: 50%;
+    max-width: 600px;
+    margin-top: 10px;
+    font-family: var(--playfair-display-family);
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    color: var(--dark-color);
+    background: var(--yellowish-color);
+    border-color: var(--yellowish-color);
+    transition: all 0.2s ease;
+}
+
+.hero-btn:hover {
+    color: var(--yellowish-color);
+    background: transparent;
+}
+
+
+/* ===================== Projects ==================== */
+
+.projects {
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--dark-color);
+    font-size: var(--normal-font);
+    font-family: var(--playfair-display-family);
+    font-style: italic;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-color);
+}
+
+.projects-container {
+    margin-top: 5rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-gap: 20px;
+}
+
+.project {
+    /* width: 400px; */
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding-inline: 20px;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-footer a {
+    font-size: var(--small-font);
+    color: var(--yellowish-color);
+    position: relative;
+    text-decoration: none;
+}
+
+.project-footer a:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--white-color);
+    transform: scale(0, 100%);
+    transform-origin: 0 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-footer a:hover::after,
+.project-footer a:active::after {
+    transform: scale(1, 1);
+    background: var(--yellowish-color);
+}
+
+
+/*  ==========================  Footer =================== */
+
+.footer {
+    background: var(--dark-color);
+    height: 60px;
+    padding-inline: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .left {
+    font-size: var(--small-font);
+}
+
+.footer .right a {
+    margin-right: 20px;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .right a:hover {
+    color: var(--yellowish-color);
+}
