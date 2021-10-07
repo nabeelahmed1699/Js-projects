@@ -198,6 +198,12 @@ section {
     background: transparent;
 }
 
+@media (max-width: 831px) {
+    .hero-text-container h3 {
+        width: 80%;
+    }
+}
+
 
 /* ===================== Projects ==================== */
 
