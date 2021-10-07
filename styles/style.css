@@ -162,7 +162,6 @@ section {
 
 .hero-text-container {
     margin-top: 17rem;
-    margin-left: -40px;
     margin-bottom: 5rem;
     display: flex;
     align-items: center;
@@ -295,7 +294,8 @@ section {
 
 .footer {
     background: var(--dark-color);
-    height: 60px;
+    min-height: 60px;
+    height: auto;
     padding-inline: 74px;
     display: flex;
     justify-content: space-between;
@@ -324,5 +324,8 @@ section {
     }
     .footer .left {
         margin-bottom: 20px;
+    }
+    .navbar .container {
+        padding-inline: 40px;
     }
 }
