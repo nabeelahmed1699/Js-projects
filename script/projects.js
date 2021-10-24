@@ -34,4 +34,11 @@ export const projects = [{
         visitLink: 'https://nabeelahmed1699.github.io/Rock-paper-scissor-game/',
         sourceCode: 'https://github.com/nabeelahmed1699/Rock-paper-scissor-game'
     },
+    {
+        id: 6,
+        name: 'Screen Recorder App',
+        img: './images/screen-recorder.PNG',
+        visitLink: 'https://nabeelahmed1699.github.io/screen-recorder/',
+        sourceCode: 'https://github.com/nabeelahmed1699/screen-recorder'
+    }
 ]
